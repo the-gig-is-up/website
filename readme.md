@@ -19,13 +19,13 @@ Website is done in Meteor and the API is by Strongloop's Loopback.
 ### Installation instructions
 
 #### Command Line:
-```
+
     $ git clone https://gitlab.com/comp2541/dolphin.git
     $ git pull
     $ cd dolphin/
     $ gradlew build
     $ gradlew installDebug
-```
+
 #### Installation via IDE:
 
  - Open as Project in an IDE.
@@ -40,6 +40,13 @@ Website is done in Meteor and the API is by Strongloop's Loopback.
  - Alternatively, the compiled apk can be distributed to users, to skip having 
    to compile each time.
 
+#### App Information
+
+- Uses Java 1.8 and Gradle v1.0.0.
+- Using Build tools version 21.1.1.
+- Targeting SDK version 21, minimum 14.
+- `gradle clean` can be used to clean the app folder.
+
 ### Testing
 
 Testing in the app has only been tested in IntelliJ. It requires the phone to be plugged in, with USB debugging enabled.
@@ -52,15 +59,6 @@ Once this file has been added, a new build configuration will be added called
 - Click run, and the tests will run.
 - If you wish to see all tests, ensure that "Hide passed tests" is not clicked in
 the Run tab of IntelliJ.
-
---------------------------------------------------------------------------------
-
-App Information:
-
-Uses Java 1.8 and Gradle v1.0.0.
-Using Build tools version 21.1.1.
-Targeting SDK version 21, minimum 14.
-`gradle clean` can be used to clean the app folder.
 
 --------------------------------------------------------------------------------
 

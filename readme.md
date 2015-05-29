@@ -52,6 +52,7 @@ Once this file has been added, a new build configuration will be added called
 - Click run, and the tests will run.
 - If you wish to see all tests, ensure that "Hide passed tests" is not clicked in
 the Run tab of IntelliJ.
+
 --------------------------------------------------------------------------------
 
 App Information:

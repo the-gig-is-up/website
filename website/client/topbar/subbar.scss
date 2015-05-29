@@ -1,0 +1,32 @@
+@import "../style";
+
+.subbar {
+  width: 100%;
+  background-color: $secondary-color;
+  padding: 10px;
+
+  h6 {
+    display: inline;
+    margin-top: 10px;
+    color: $silver;
+  }
+
+  i {
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: $silver;
+    margin-right: 5px;
+  }
+}
+
+.admin-sub-templates {
+  form {
+    display: inline;
+  }
+
+  button {
+    @extend button;
+    font-size: 0.8em;
+    padding: 8px 10px 8px 10px;
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "sources": [
+      "../common/models",
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ]
+  },
+  "AccessTokens": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "UserCredentials": {
+    "dataSource": "db",
+    "public": true
+  },
+  "UserIdentities": {
+    "dataSource": "db",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Venue": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Artist": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Participation": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Booking": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Users": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Seat": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SeatType": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Sitting": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Card": {
+    "dataSource": "mysql",
+    "public": true
+  },
+   "Email": {
+    "dataSource": "mail"
+  }
+}

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.dolphin.thegigisup.helpers.CustomParallaxScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:backgroundView="@+id/featured_image"
+            app:scrollFactor="0.5"
+            android:id="@+id/scrollView">
+
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            <!-- Background bit -->
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:id="@+id/featured_image"
+                    android:contentDescription="Artists image"
+                    android:src="@drawable/event" />
+
+            <!-- Content bit -->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/featured_image"
+                    android:background="@color/color_white"
+                    android:paddingTop="25dp"
+                    android:paddingLeft="@dimen/activity_padding"
+                    android:paddingRight="@dimen/activity_padding"
+                    android:paddingBottom="@dimen/activity_padding"
+                    android:id="@+id/linearLayout">
+
+
+                <!--Title bit-->
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        style="@style/ItemHeadings"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/fea_tv_artistName"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:singleLine="false" />
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:paddingTop="@dimen/activity_padding"
+                              android:paddingLeft="@dimen/activity_padding"
+                              android:orientation="horizontal">
+
+
+
+                    <!--Tickets bit-->
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_height="wrap_content">
+
+                        <android.view.IconicsTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:textSize="16sp"
+                                android:textColor="@color/color_primary"
+                                android:id="@+id/eve_itv_ticket_icon"
+                                android:text="{faw-ticket}" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:textSize="14sp"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/color_darker_gray"
+                                android:id="@+id/fea_tv_ticketNum" />
+
+                    </LinearLayout>
+
+
+                    <!--Money bit-->
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:paddingLeft="12dp"
+                                  android:layout_height="wrap_content">
+
+                        <android.view.IconicsTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:textSize="16sp"
+                                android:paddingTop="2dp"
+                                android:textColor="@color/color_primary"
+
+                                android:text="{faw-money}" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/color_darker_gray"
+                                android:textSize="14sp"
+                                android:id="@+id/fea_tv_cost" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Warning bit-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eve_tv_warning"
+                        android:visibility="gone"
+                        android:paddingTop="3dp"
+                        android:text="Hurry! Tickets nearly sold out!"
+                        android:textColor="@color/color_red"
+                        android:textStyle="bold"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:paddingRight="@dimen/activity_padding"
+                        />
+
+
+                <!--Desc bit-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fea_tv_description"
+                        android:padding="10dp"
+                        />
+
+
+                <!--Artists bit-->
+                <LinearLayout android:layout_width="fill_parent"
+                              style="@style/LabelsParent"
+                              android:layout_marginTop="20dp"
+                              android:layout_height="wrap_content">
+
+                    <android.view.IconicsTextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="{faw-users}"
+                            style="@style/Labels" />
+
+                    <LinearLayout android:layout_width="fill_parent"
+                                  android:orientation="vertical"
+                                  style="@style/LabelsValues"
+                                  android:layout_height="fill_parent">
+
+                        <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/LabelsValues"
+                                android:id="@+id/fea_tv_artists" />
+
+                        <!--Artist button bit-->
+                        <Button android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/eve_bt_artists"
+                                android:text="View Artist Info"
+                                style="@style/SmallButtonTheme"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Location bit-->
+                <LinearLayout android:layout_width="fill_parent"
+                              style="@style/LabelsParent"
+                              android:layout_marginTop="20dp"
+                              android:layout_height="wrap_content">
+
+                    <android.view.IconicsTextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="{faw-map-marker}"
+                            style="@style/Labels" />
+
+                    <!--Location labels container-->
+                    <LinearLayout android:layout_width="fill_parent"
+                                  android:orientation="vertical"
+                                  style="@style/LabelsValues"
+                                  android:layout_height="fill_parent">
+
+                        <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/LabelsValues"
+                                android:id="@+id/fea_tv_location" />
+
+                        <!--Location button bit-->
+                        <Button android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:id="@+id/eve_bt_open_map"
+                                android:text="Open map"
+                                style="@style/SmallButtonTheme"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <!--Time bit-->
+                <LinearLayout android:layout_width="fill_parent"
+                              style="@style/LabelsParent"
+                              android:layout_height="wrap_content">
+
+                    <android.view.IconicsTextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="{faw-clock-o}"
+                            style="@style/Labels" />
+
+                    <!--Time labels container-->
+                    <LinearLayout android:layout_width="fill_parent"
+                                  android:orientation="vertical"
+                                  style="@style/LabelsValues"
+                                  android:layout_height="fill_parent">
+
+                        <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/LabelsValues"
+                                android:id="@+id/fea_tv_timedate" />
+
+                        <!--Add to calendar button-->
+                        <Button android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:id="@+id/eve_bt_add_to_cal"
+                                android:text="Add to Calendar"
+                                style="@style/SmallButtonTheme"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <View
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/featured_image"
+                    />
+
+            <com.shamanland.fab.FloatingActionButton
+                    android:id="@+id/fea_bt_buy"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    app:floatingActionButtonColor="@color/color_primary"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/shopping_cart"
+                    android:scaleType="centerInside"
+                    app:floatingActionButtonImplicitElevation="false"
+                    android:layout_alignBottom="@id/featured_image"
+                    android:layout_marginBottom="@dimen/floating_action_button_margin_normal_minus"
+                    android:layout_marginRight="@dimen/floating_action_button_margin_normal" />
+
+        </RelativeLayout>
+
+
+    </com.dolphin.thegigisup.helpers.CustomParallaxScrollView>
+
+</FrameLayout>

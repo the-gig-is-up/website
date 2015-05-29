@@ -1,0 +1,15 @@
+template(name='adminLogin')
+    .container#admin-login
+        .row.spacer
+            .small-8.columns.small-centered.text-center
+                h2 Admin login
+        .row.spacer-small
+            .medium-5.small-8.columns.small-centered
+                form.login-admin-please
+                    .row
+                        input(type="email", placeholder="name@example.com", name="email")
+                        input(type="password", placeholder="********", name="pass")
+                    .row.text-center
+                        #message
+                    .row.spacer-small.text-center
+                        button.center Login

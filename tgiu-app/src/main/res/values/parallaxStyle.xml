@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomParallaxScrollView">
+        <attr name="backgroundView" />
+        <attr name="scrollFactor" />
+    </declare-styleable>
+
+    <attr name="backgroundView" format="reference" />
+    <attr name="scrollFactor" format="float" />
+
+</resources>

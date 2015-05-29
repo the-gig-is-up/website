@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.dolphin.thegigisup.activitys.ExpandableArtistActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ExpandableListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/elv_artist_frag"
+            android:animateLayoutChanges="true"
+            android:groupIndicator="@drawable/activated"
+            android:layout_gravity="center_horizontal|top"/>
+</FrameLayout>

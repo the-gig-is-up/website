@@ -1,0 +1,32 @@
+{
+  "name": "Card",
+  "plural": "Cards",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "userID": {
+      "type": "number",
+      "required": true
+    },
+    "nameOnCard": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": "userID"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

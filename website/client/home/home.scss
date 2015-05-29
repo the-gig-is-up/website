@@ -1,0 +1,71 @@
+@import "../style";
+
+#home-title {
+  font-weight: 800;
+  font: $big-font;
+  color: $stone;
+}
+
+
+#search {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  @include drop-shadow(1);
+  z-index: -1;
+}
+
+#search-results {
+  padding-bottom: 50px;
+  z-index: 1;
+  color: $contrast;
+
+
+
+  .fa-map-marker {
+    margin-left: 7px;
+  }
+
+  .subheading > i {
+    font-size: 2rem;
+  }
+
+  .subheading > h2 {
+    padding-left: 10px;
+  }
+
+  .subheading > p {
+    font-size: 1.2rem;
+    padding-left: 10px;
+    color: $contrast;
+  }
+
+  .subheading > * {
+    display: inline-block;
+  }
+
+  .inline > i {
+    color: $dgray;
+  }
+
+  #fire {
+    color: $tertiary-color;
+  }
+
+  #flash {
+    color: $primary-color;
+  }
+
+  #hot {
+    .small-10.columns {
+      @extend .left-border-2;
+    }
+  }
+
+  .upcoming {
+    .small-10.columns {
+      @extend .left-border-1;
+    }
+  }
+
+
+}

@@ -1,0 +1,26 @@
+template(name='adminDeleteUser')
+    .container.admin-sub-templates
+        .row.spacer-small
+                h1 Delete User
+                p Enter details of the user in the boxes below. The more boxes filled, the better.
+                form
+                    .medium-3.small-12.columns
+                        input(type="text", placeholder="First name", name="fname")
+                    .medium-3.small-12.columns
+                        input(type="text", placeholder="Last name", name="lname")
+                    .medium-3.small-12.columns
+                        input(type="email", placeholder="Email", name="email")
+                    .medium-3.small-12.columns.text-center
+                        button Search
+        .row.spacer-small
+            +each getUsers
+                .big-button.full-width
+                    .split-left
+                        h3 {{this.firstName}}
+                        h3 {{this.lastName}}
+                        h6 {{this.username}}
+                        h6 {{this.email}}
+                        h6 {{this.index}}
+                    .split-right
+                        h3.redify Delete
+

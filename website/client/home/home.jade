@@ -1,0 +1,100 @@
+template(name='home')
+    .container#search
+        +topbar
+        .row
+            .small-12.columns.text-center
+                h1#home-title The Gig Is Up
+        .row
+            .small-10.columns.text-center.small-centered
+                p(style="color: silver") Search for events near you below.
+        .row.spacer-small
+            .medium-6.small-9.columns.small-centered.text-center
+                form
+                    input(type="text", name="search", placeholder="Search gigs")
+    .container.full-width#search-results
+        //div {{#each getArray}}<div columns='small-4 columns'>Hi</div>{{/each}}
+        .row.spacer
+            .medium-4.small-10.small-centered.medium-uncentered.medium-text-left.small-text-center.columns
+                .subheading
+                    i.fa.fa-fire#fire
+                    h2 HOT
+        .row.spacer-small#hot
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 1
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Some description about the event goes here.
+             .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 2
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Some description about the event goes here. Extra text added here to showcase multiple lines.
+             .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 3
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Some description about the event goes here.
+        .row.spacer
+            .medium-4.small-10.medium-uncentered.small-centered.medium-text-left.small-text-center.columns
+                .subheading
+                    i.fa.fa-flash#flash
+                    h2 UPCOMING
+        .row.spacer-small.upcoming
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 1
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Some description about the event goes here.
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 2
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Description of event.
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 3
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Some description about the event goes here.
+        .row.spacer-small.upcoming
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 4
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Description
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 5
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Description of event.
+            .medium-4.small-10.medium-uncentered.small-centered.columns
+                h4 Event 6
+                div.inline
+                    i.fa.fa-clock-o
+                    | 20:00 to 23:00
+                    i.fa.fa-map-marker
+                    | O2 Arena Leeds
+                div Description.

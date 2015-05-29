@@ -1,0 +1,14 @@
+template(name='login')
+   .container#user-login
+      .row.spacer
+         .small-8.columns.small-centered.text-center
+            h2 Hello!
+            p Sign in with your email address below. Or sign up now.
+      .row
+         .medium-5.small-8.columns.small-centered
+            form
+               .row
+                  input(type="text", placeholder="name@example.com", name="email_value")
+                  input(type="password", placeholder="********", name="pass_value")
+               .row.spacer-small.text-center
+                  button.center Login

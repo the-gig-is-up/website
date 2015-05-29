@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="35dp">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/small_text_size"
+              android:text="Select card"
+              style="@style/SmallLabels"
+              android:gravity="left"/>
+
+    <TextView android:id="@+id/chec_tv_nocards"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Please enter your card information to purchase tickets"
+              android:layout_marginTop="15dp"/>
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                  android:id="@+id/card_rv_cardscroll"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/chec_bn_addcard"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Add card"
+            android:layout_gravity="center_horizontal"
+            style="@style/SmallButtonTheme"
+            android:layout_marginBottom="15dp"
+            android:onClick="onClick"/>
+
+        <Space android:layout_width="80dp"
+               android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/chec_bn_removecard"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Remove card"
+            android:layout_gravity="center_horizontal"
+            style="@style/SmallButtonTheme"
+            android:layout_marginBottom="15dp"
+            android:onClick="onClick"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/card_bn_nextpage"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Next"
+            android:layout_gravity="center_horizontal"
+            style="@style/SmallButtonTheme"
+            android:onClick="onClick"/>
+
+</LinearLayout>

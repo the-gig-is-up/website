@@ -1,0 +1,49 @@
+{
+  "name": "Sitting",
+  "plural": "Sittings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "userID": {
+      "type": "number",
+      "required": true
+    },
+    "seatID": {
+      "type": "number",
+      "required": true
+    },
+    "bookingID": {
+      "type": "number",
+      "required": true
+    },
+    "eventID": {
+      "type": "number",
+      "required": false
+    }
+
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": "userID"
+    },
+    "booking": {
+      "type": "belongsTo",
+      "model": "Booking",
+      "foreignKey": "bookingID"
+    },
+    "seats": {
+      "type": "hasMany",
+      "model": "Seat",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,33 @@
+template(name='adminAddUser')
+    .container.admin-sub-templates
+        .row.spacer-small
+            h1 Add User
+            form
+                .medium-4.small-12.columns
+                    input.red(type="text", placeholder="First name", name="fname")
+                .medium-4.small-12.columns
+                    input.red(type="text", placeholder="Last name", name="lname")
+                .medium-4.small-12.columns
+                    input(type="text", placeholder="Username", name="username")
+                .medium-12.small-12.columns
+                    input.red(type="email", placeholder="Email", name="email")
+
+                .medium-12.small-12.columns
+                    p Passwords must contain at least one letter
+                .medium-6.small-12.columns
+                    input.red(type="password", placeholder="Password", name="password")
+                .medium-6.small-12.columns
+                    input.red(type="password", placeholder="Confirm password", name="cpassword")
+                hr
+                .medium-2.small-12.columns
+                    input(type="checkbox", name="admin")
+                    label Make admin
+                .medium-2.small-12.columns
+                    input(type="checkbox", name="artist")
+                    label Make artist
+                .medium-8.columns-nc
+                .medium-12.columns-nc.text-center
+                    #message
+                .medium-12.small-12.columns.text-center.spacer-small
+                    button Submit
+

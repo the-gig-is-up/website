@@ -1,0 +1,1 @@
+Private folder won't be uploaded to server when the website is live. It also won't be sent to client.

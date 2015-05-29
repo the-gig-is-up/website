@@ -1,0 +1,110 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MainTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_secondary</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@color/color_gray</item>
+        <item name="android:textColorPrimary">@color/color_white</item>
+        <item name="android:textColorSecondary">@color/color_white</item>
+        <item name="android:spinnerStyle">@style/SmallLabelsValuesSpinner</item>
+        <item name="colorControlNormal">@color/color_primary</item>
+        <item name="colorControlHighlight">@color/color_darker_gray</item>
+        <item name="android:itemTextAppearance">@style/OverflowTextTheme</item>
+    </style>
+
+    <style name="HeadingTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ItemHeadings">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_secondary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ButtonTheme">
+        <item name="android:background">@color/color_primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SmallButtonTheme">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@drawable/text_colour</item>
+        <item name="android:background">@drawable/activated_inverse</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+
+    <style name="LabelsParent">
+        <item name="android:weightSum">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Labels">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="LabelsValues">
+        <item name="android:textColor">@color/color_darker_gray</item>
+        <item name="android:layout_weight">0.4</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SmallLabels">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SmallLabelsValues" parent="SmallLabels">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SmallLabelsValuesSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/color_darker_gray</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomActionBarTheme" parent="MainTheme">
+        <item name="android:windowBackground">@color/color_secondary</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+    <style name="TextViewTheme">
+        <item name="android:textColor">@color/color_darker_gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="OverflowTextTheme" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/color_secondary</item>
+    </style>
+
+    <style name="EditTextTheme" parent="TextViewTheme">
+        <item name="android:backgroundTint">@color/color_dark_gray</item>
+    </style>
+
+</resources>

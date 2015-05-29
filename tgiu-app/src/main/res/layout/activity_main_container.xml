@@ -1,0 +1,138 @@
+<android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--The container-->
+    <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <!-- The listview and the user details-->
+    <LinearLayout android:layout_width="fill_parent"
+                  android:id="@+id/left_drawer"
+                  android:layout_gravity="start"
+                  android:orientation="vertical"
+                  android:background="@color/color_gray"
+                  android:layout_height="fill_parent">
+
+        <!-- The user details layout-->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/act_ll_user_layout"
+                android:background="@drawable/activated_inverse"
+                android:layout_height="110dp">
+
+            <!-- Profile image -->
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="30dp"
+                    android:src="@drawable/event"
+                    android:id="@+id/act_iv_user_image"
+                    app:riv_oval="false"/>
+
+            <!--Some user text eg email -->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/act_ll_user_details"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textColor="@color/color_darker_gray"
+                              android:textSize="16sp"
+                              android:id="@+id/act_iv_user_name"
+                              android:text="User not logged in"/>
+
+                    <android.view.IconicsButton
+                            android:id="@+id/act_bt_logout"
+                            style="@style/SmallButtonTheme"
+                            android:textSize="16sp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginStart="7dp"
+                            android:onClick="onClick"
+                            android:text="{faw-sign-out}" />
+
+                </LinearLayout>
+
+
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/color_dark_gray"
+                          android:id="@+id/act_iv_user_email"
+                          android:text=""/>
+
+
+
+            </LinearLayout>
+
+            <!-- Layout for logging in -->
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="16dp"
+                          android:layout_marginTop="5dp"
+                          android:id="@+id/act_ll_login_button"
+                          android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/act_bt_login"
+                        style="@style/SmallButtonTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:onClick="onClick"
+                        android:gravity="center"/>
+
+                <TextView android:layout_width="20dp"
+                          android:text="or"
+                          android:textColor="@color/color_darker_gray"
+                          android:layout_height="wrap_content"/>
+
+                <Button
+                        android:id="@+id/act_bt_signup"
+                        style="@style/SmallButtonTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign up"
+                        android:gravity="center"
+                        android:onClick="onClick"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- The nav drawer -->
+        <ListView
+                android:layout_width="fill_parent"
+                android:id="@+id/left_drawer_list"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0px"/>
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.DrawerLayout>

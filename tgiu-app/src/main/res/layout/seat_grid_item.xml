@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp" >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            app:riv_corner_radius="14dp"
+            android:id="@+id/sea_riv_seat_bg"
+            android:src="@color/color_primary"
+            app:riv_oval="false"/>
+
+
+    <TextView
+            android:id="@+id/sea_tv_seat_name"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_gray"
+            android:textSize="10sp" >
+    </TextView>
+
+</RelativeLayout>

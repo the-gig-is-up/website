@@ -1,0 +1,153 @@
+@import "settings";
+@import "../.meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/foundation";
+@import "mixins";
+@import "quantum-shadows";
+
+
+@mixin light-text {
+  i, h1, h2, h3, h4, h5, h6{
+    color: $contrast;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  p {
+    color: $contrast;
+    letter-spacing: 1px;
+  }
+
+}
+
+@mixin dark-text {
+  i, h1, h2, h3, h4, h5, h6{
+    color: $primary-color;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  p {
+    letter-spacing: 1px;
+    color: $primary-color;
+  }
+}
+
+@mixin ie_transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+
+@mixin slide($bg) {
+  $pad: strip-unit($topbar-height);
+  padding-top: $pad + 20 + px;
+  padding-bottom: $topbar-height;
+  width: 100%;
+  background: $bg;
+}
+
+
+body {
+  @include light-text;
+  background-color: $stone;
+}
+
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  color: $tertiary-color;
+}
+
+a:hover {
+  color: darken($tertiary-color, 10%);
+}
+
+button {
+  @include drop-shadow(1);
+  text-transform: uppercase;
+}
+
+.spacer {
+  @media #{$small-only} {
+    padding-top: 3.5em;
+  }
+  @media #{$medium-up} {
+    padding-top: 4em;
+  }
+
+}
+
+.spacer-small {
+  @media #{$small-only} {
+    padding-top: 1.5em;
+  }
+  @media #{$medium-up} {
+    padding-top: 2em;
+  }
+
+}
+
+.panel {
+  @extend .panel;
+  @include drop-shadow(1);
+  background-color: $secondary-color;
+  color: $white;
+  cursor: pointer;
+}
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.full-height {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: initial;
+}
+
+.left-border-1 {
+  border-left: 3px solid $primary-color;
+}
+
+.left-border-2 {
+  border-left: 3px solid $tertiary-color;
+}
+
+
+
+
+
+.hide-for-land-and-small {
+  @media #{$small-only} and (orientation: landscape) {
+    @extend .hide;
+  }
+  @media #{$small-only} and (orientation: portrait) {
+    display: block !important;
+    visibility: visible;
+  }
+  @media #{$medium-up} and (orientation: landscape) {
+    display: block !important;
+    visibility: visible;
+
+  }
+  @media #{$medium-up} and (orientation: portrait) {
+    display: block !important;
+    visibility: visible;
+
+  }
+}
+
+
+.columns-nc {
+  @extend .columns;
+  min-height: 1px;
+}

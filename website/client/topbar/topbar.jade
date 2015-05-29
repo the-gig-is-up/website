@@ -1,0 +1,21 @@
+template(name="topbar")
+    header.banner
+        nav
+            .row
+                .medium-6.small-6.columns-nc
+                    .name
+                        a(href="/")
+                            h4#title The Gig Is Up
+                if isLoggedIn
+                    .medium-6.small-6.text-right.columns-nc
+                        ul#logout
+                            li
+                                a(href="#") LOGOUT
+
+                else
+                    .medium-6.small-3.text-right.columns-nc
+                        ul#login-list
+                            li
+                                a(href="#") LOGIN
+                            li
+                                a(href="#") SIGN UP

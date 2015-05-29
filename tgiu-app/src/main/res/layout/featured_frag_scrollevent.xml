@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="160dp"
+              android:background="@drawable/activated"
+              android:clickable="true"
+              android:layout_marginRight="6dp"
+              android:layout_height="fill_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="1"
+                  android:orientation="vertical"
+                  android:padding="10dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/featured_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="center"
+                    app:riv_corner_radius="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/event"
+                    app:riv_oval="false"/>
+
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="30dp"
+                      android:id="@+id/fea_tv_event_artist"
+                      style="@style/ItemHeadings"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:textStyle="normal"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content">
+
+        <android.view.IconicsTextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:textSize="12sp"
+                                      android:textColor="@color/color_dark_gray"
+                                      android:id="@+id/fea_tv_event_date_time"/>
+
+        <android.view.IconicsTextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:textSize="12sp"
+                                      android:textColor="@color/color_dark_gray"
+                                      android:text="{faw-ticket} 5 left"
+                                      android:paddingLeft="10dp"
+                                      android:id="@+id/fea_tv_event_tickets_left"/>
+
+        <android.view.IconicsTextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:textSize="12sp"
+                                      android:textStyle="bold"
+                                      android:paddingLeft="10dp"
+                                      android:textColor="@color/color_dark_gray"
+                                      android:id="@+id/fea_tv_event_price" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/fea_tv_event_venue"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/fea_tv_event_location"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

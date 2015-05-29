@@ -1,0 +1,82 @@
+@import "../../style";
+
+#left-admin-pane {
+  @include drop-shadow(2);
+
+  border-right:solid 2px $silver;
+  padding: 20px;
+  background-color: $primary-color;
+  z-index: 1;
+
+  a {
+    color: $silver;
+    padding: 2px;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+#right-admin-pane {
+  margin: 2px;
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+}
+
+.big-button {
+  @extend .left-border-1;
+  display: inline-block;
+  background-color: darken($stone, 2%);
+  color: lighten($contrast, 10%);
+  padding: 10px;
+  font-size: 1.4em;
+  width: 70%;
+
+
+  .split-left {
+    position: relative;
+    float: left;
+    width: 50%;
+  }
+  .split-right {
+    position: relative;
+    float:right;
+    width: 50%;
+    height: 100px;
+  }
+
+  h3 {
+    display: inline;
+    padding-right: 6px;
+  }
+
+  h6 {
+    text-transform: none;
+  }
+
+  .redify {
+    position: absolute;
+    right: 10%;
+    top: 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: $tertiary-color;
+  }
+
+
+}
+
+
+.big-button:hover {
+  background-color: darken($stone, 4%);
+  color: $primary-color;
+}
+
+.admin-sub-templates {
+  .red {
+    background-color: #F9CCCC;
+  }
+}

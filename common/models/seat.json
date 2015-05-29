@@ -1,0 +1,53 @@
+{
+  "name": "Seat",
+  "plural": "Seats",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "row": {
+      "type": "string",
+      "required": true
+    },
+    "column": {
+      "type": "number",
+      "required": true
+    },
+    "typeID": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "seatType": {
+      "type": "hasOne",
+      "model": "SeatType",
+      "foreignKey": "id"
+    },
+    "events": {
+      "type": "hasMany",
+      "model": "Event",
+      "foreignKey": "id",
+      "through": "Booking"
+    },
+    "venue": {
+      "type": "belongsTo",
+      "model": "Venue",
+      "foreignKey": "venueID"
+    },
+    "sittings": {
+      "type": "hasMany",
+      "model": "Sitting",
+      "foreignKey": "seatID"
+    }
+
+
+
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,12 @@
+template(name='rightUsers')
+    h1 Users
+    h4 Frequent Actions
+    a.big-button(href="{{pathFor 'adminAddUser'}}") Add user
+    a.big-button(href="{{pathFor 'adminDeleteUser'}}") Delete user
+    a.big-button(href="#") Change user details
+    h4 View Actions
+    a.big-button(href="#") View user details
+    h4 List Actions
+    a.big-button(href="#") View inactive users
+    a.big-button(href="#") View latest <b>n</b> users
+

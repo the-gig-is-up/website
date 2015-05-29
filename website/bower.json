@@ -1,0 +1,22 @@
+{
+  "name": "Dolphin Website",
+  "version": "1.0.0",
+  "dependencies": {
+    "sticky-kit": "~1.1.0",
+    "jquery-backstretch": "~2.0.4",
+    "jquery-color": "~2.1.2"
+  },
+  "install": {
+    "path": {
+      "css": "client/libs/css",
+      "scss": "client/libs/sass",
+      "js": "client/libs/js"
+    },
+    "sources" : {
+      "jquery-color" : ".meteor/bower_components/jquery-color/jquery.color.js"
+    }
+  },
+  "resolutions": {
+    "jquery": "~1.9.1"
+  }
+}

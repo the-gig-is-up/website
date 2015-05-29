@@ -1,0 +1,75 @@
+{
+  "name": "Booking",
+  "plural": "Bookings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "userID": {
+      "type": "number",
+      "required": true
+    },
+    "eventID": {
+      "type": "number",
+      "required": true
+    },
+    "ticketRef": {
+      "type": "string"
+    },
+    "isVIP": {
+      "type": "boolean"
+    },
+
+    "cardID": {
+      "type": "string",
+      "required": true
+    },
+    "dateTime": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": "userID"
+    },
+    "event": {
+      "type": "belongsTo",
+      "model": "Event",
+      "foreignKey": "eventID"
+    },
+    "seats": {
+      "type": "hasMany",
+      "model": "Seat",
+      "foreignKey": "bookingID",
+      "through": "Sitting"
+    },
+    "card": {
+      "type": "belongsTo",
+      "model": "Card",
+      "foreignKey": "cardID"
+    },
+    "venue": {
+      "type": "hasOne",
+      "model": "Venue",
+      "foreignKey": "id",
+      "through": "Event"
+    }
+
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": []
+}

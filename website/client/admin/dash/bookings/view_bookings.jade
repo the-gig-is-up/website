@@ -1,0 +1,18 @@
+template(name='adminViewBookings')
+   .container.admin-sub-templates
+      .row.spacer-small
+         h1 View Bookings for user
+         p Enter the ID of the user below.
+         form
+            .medium-9.small-12.columns
+               input(type="number", placeholder="ID", name="id")
+            .medium-3.small-12.columns.text-center
+               button Search
+      .row.spacer-small
+         +each getBookings
+            .big-button.full-width
+              h3 {{this.firstName}}
+              h3 {{this.lastName}}
+              h6 {{this.username}}
+              h6 {{this.email}}
+              h6 {{this.index}}

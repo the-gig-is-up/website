@@ -1,0 +1,13 @@
+template(name='adminDash')
+   +topbar
+   .container
+      .row.full-width.spacer
+         .medium-2.text-right.columns#left-admin-pane
+            a#admin-users(href="#users") Users
+            a#admin-bookings(href="#bookings") Bookings
+            a#admin-events(href="#events") Events
+         .medium-1.columns-nc
+         .medium-9.columns#right-admin-pane
+            |   {{#if isStep 1}}{{> rightUsers}}{{/if}}
+            |   {{#if isStep 2}}{{> rightBookings}}{{/if}}
+            |   {{#if isStep 3}}{{> rightEvents}}{{/if}}

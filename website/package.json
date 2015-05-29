@@ -1,0 +1,14 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team Dolphin",
+  "license": "ISC",
+  "dependencies": {
+    "bower-installer": "^0.8.4"
+  }
+}

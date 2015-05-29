@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:text="@string/registration"
+        android:textSize="@dimen/headings_text_size"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="@string/fill_details"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/sig_et_username"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Username"
+            android:gravity="bottom"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/color_darker_gray"
+            android:backgroundTint="@color/color_dark_gray"/>
+
+        <EditText
+            android:id="@+id/sig_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Email address"
+            android:gravity="bottom"
+            android:textSize="@dimen/small_text_size"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/color_darker_gray"
+            android:backgroundTint="@color/color_dark_gray"/>
+
+        <EditText
+            android:id="@+id/sig_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/password_hint"
+            android:gravity="bottom"
+            android:textSize="@dimen/small_text_size"
+            android:password="true"
+            android:textColor="@color/color_darker_gray"
+            android:backgroundTint="@color/color_dark_gray"/>
+        
+        <CheckBox
+            android:id="@+id/sig_cb_checkpassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.65"
+            android:layout_marginBottom="10dp"
+            android:text="Show password"
+            android:textColor="@color/color_dark_gray"
+            android:backgroundTint="@color/color_dark_gray"/>
+
+        <EditText
+            android:id="@+id/sig_et_location"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/location"
+            android:gravity="bottom"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/color_darker_gray"
+            android:backgroundTint="@color/color_dark_gray"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"/>
+    
+    <Button
+        android:id="@+id/sig_bn_signup"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:text="@string/sign_up"
+        style="@style/SmallButtonTheme"/>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+@import "../style";
+
+
+.name {
+  margin-left: 10px;
+  margin-top: 27px;
+  display: inline-block;
+
+}
+
+.home-banner {
+  @include drop-shadow(0);
+  background-color: transparent;
+}
+
+
+.banner {
+  @include drop-shadow(1);
+  color: $primary-color;
+  z-index: 100;
+  width: 100%;
+  background-color: $primary-color;
+  height: $topbar-height;
+
+  i {
+    margin-right: 10px;
+    margin-top: 35px;
+    display: inline-block;
+    color: darken($white, 5%);
+  }
+
+  ul {
+    margin-top: 31px;
+    li {
+      display: inline;
+      padding-right: 20px;
+      padding-left: 5px;
+      a {
+        color: $white-smoke;
+      }
+      a:hover {
+        color: darken($silver, 20%);
+      }
+    }
+  }
+
+  #title {
+    color: $white;
+  }
+}
+
+.banner.shadow {
+  @include drop-shadow(3);
+}
+
+.topbar-right {
+  padding-top: 15px;
+  text-transform: uppercase;
+
+  li {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: inline;
+  }
+
+  a {
+    color: $primary-color;
+    padding: 10px;
+
+  }
+
+  a:hover {
+    color: $secondary-color;
+    background-color: $shade;
+    padding: 10px;
+  }
+
+}
+
+.right {
+  @extend .right;
+  ul {
+    .fa, i {
+      color: $primary-color;
+    }
+
+  }
+}
+
